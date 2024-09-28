@@ -33,8 +33,8 @@ This is a simple weather application built using React that allows users to chec
 ```
 
 3. Get Your OpenWeatherMap API Key:
-•	Sign up on OpenWeatherMap to create a free account.
-•	Obtain a free API key to use in your application.
+- Sign up on OpenWeatherMap to create a free account.
+- Obtain a free API key to use in your application.
 
 4. Running the App
 To start the application, run:
@@ -43,6 +43,6 @@ npm start
 ```
 
 Usage
--Enter the location (city name) in the search box.
--Click the search button to fetch the current weather data and forecast.
--Use the toggle button to switch between Celsius and Fahrenheit.
+- Enter the location (city name) in the search box.
+- Click the search button to fetch the current weather data and forecast.
+- Use the toggle button to switch between Celsius and Fahrenheit.
