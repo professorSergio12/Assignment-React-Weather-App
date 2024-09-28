@@ -19,7 +19,7 @@ function App() {
 
   async function handleClick() {
     setError(false);
-    const api_key = "a811d263fe07b1b6797d207f35b0987d"
+    const api_key = "a811d263fe07b1b6797d207f35b0987d";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&temps=${temp}&appid=${api_key}`;
 
     try {
@@ -31,7 +31,7 @@ function App() {
         return;
       }
       const weather_data = await response.json();
-      console.log(weatherData)
+      console.log(weatherData);
       setData(weather_data);
 
       // Fetch the 3-day forecast
@@ -109,8 +109,8 @@ function App() {
           <div className="weather-box">
             <p className="temperature">
               {temp === "C"
-                ? weatherData.main.temp.toFixed(2) + " °C"
-                : ((weatherData.main.temp * 9) / 5 + 32).toFixed(2) + " °F"}
+                ? (weatherData.main.temp - 273.15).toFixed(2) + " °C"
+                : weatherData.main.temp.toFixed(2) + " °F"}
             </p>
             <p className="description">{weatherData.weather[0].description}</p>
           </div>
@@ -161,8 +161,8 @@ function App() {
                 />
                 <p>
                   {temp === "C"
-                    ? day.main.temp.toFixed(2) + " °C"
-                    : ((day.main.temp * 9) / 5 + 32).toFixed(2) + " °F"}
+                    ? (day.main.temp - 273.15).toFixed(2) + " °C"
+                    : day.main.temp.toFixed(2) + " °F"}
                 </p>
                 <p>{day.weather[0].description}</p>
               </div>
