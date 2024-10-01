@@ -110,7 +110,7 @@ function App() {
             <p className="temperature">
               {temp === "C"
                 ? (weatherData.main.temp - 273.15).toFixed(2) + " °C"
-                : weatherData.main.temp.toFixed(2) + " °F"}
+                : ((((weatherData.main.temp - 273.15) * 9)/5) + 32).toFixed(2) + " °F"}
             </p>
             <p className="description">{weatherData.weather[0].description}</p>
           </div>
@@ -162,7 +162,7 @@ function App() {
                 <p>
                   {temp === "C"
                     ? (day.main.temp - 273.15).toFixed(2) + " °C"
-                    : day.main.temp.toFixed(2) + " °F"}
+                    : ((((day.main.temp - 273.15) * 9)/5) + 32).toFixed(2) + " °F"}
                 </p>
                 <p>{day.weather[0].description}</p>
               </div>
